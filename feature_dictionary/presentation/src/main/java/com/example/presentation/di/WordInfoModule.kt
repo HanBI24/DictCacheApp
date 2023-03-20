@@ -26,39 +26,39 @@ object WordInfoModule {
     @Provides
     @Singleton
     fun provideGetWordInfoUseCase(
-        repository: com.example.domain.repository.WordInfoRepository
-    ): com.example.domain.use_case.GetWordInfoUseCase {
-        return com.example.domain.use_case.GetWordInfoUseCase(repository)
+        repository: WordInfoRepository
+    ): GetWordInfoUseCase {
+        return GetWordInfoUseCase(repository)
     }
 
     @Provides
     @Singleton
     fun provideWordInfoRepository(
-        db: com.example.data.local.WordInfoDatabase,
-        api: com.example.data.remote.DictionaryApi
-    ): com.example.domain.repository.WordInfoRepository {
-        return com.example.data.repository.WordInfoRepositoryImpl(api, db.dao)
+        db: WordInfoDatabase,
+        api: DictionaryApi
+    ): WordInfoRepository {
+        return WordInfoRepositoryImpl(api, db.dao)
     }
 
     @Provides
     @Singleton
     fun provideWordInfoDatabase(
         app: Application
-    ): com.example.data.local.WordInfoDatabase {
+    ): WordInfoDatabase {
         return Room.databaseBuilder(
-            app, com.example.data.local.WordInfoDatabase::class.java, "word_db"
-        ).addTypeConverter(com.example.data.local.Converters(com.example.data.util.GsonParser(Gson())))
+            app, WordInfoDatabase::class.java, "word_db"
+        ).addTypeConverter(Converters(GsonParser(Gson())))
             .fallbackToDestructiveMigration()
             .build()
     }
 
     @Provides
     @Singleton
-    fun provideDictionaryApi(): com.example.data.remote.DictionaryApi {
+    fun provideDictionaryApi(): DictionaryApi {
         return Retrofit.Builder()
-            .baseUrl(com.example.common.Constants.BASE_URL)
+            .baseUrl(Constants.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-            .create(com.example.data.remote.DictionaryApi::class.java)
+            .create(DictionaryApi::class.java)
     }
 }

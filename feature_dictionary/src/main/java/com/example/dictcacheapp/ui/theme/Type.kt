@@ -1,4 +1,4 @@
-package com.example.presentation.ui.theme
+package com.example.dictcacheapp.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle

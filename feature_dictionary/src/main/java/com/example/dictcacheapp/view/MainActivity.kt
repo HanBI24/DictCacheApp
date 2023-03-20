@@ -1,4 +1,4 @@
-package com.example.presentation.view
+package com.example.dictcacheapp.view
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -11,7 +11,8 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.example.presentation.ui.theme.DictCacheAppTheme
+import com.example.dictcacheapp.ui.theme.DictCacheAppTheme
+import com.example.dictcacheapp.view.WordInfoItem
 import com.example.presentation.viewmodel.WordInfoViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest

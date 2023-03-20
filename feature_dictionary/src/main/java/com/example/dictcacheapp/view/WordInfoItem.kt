@@ -1,4 +1,4 @@
-package com.example.presentation.view
+package com.example.dictcacheapp.view
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer

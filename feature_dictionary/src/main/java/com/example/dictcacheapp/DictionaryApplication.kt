@@ -1,4 +1,4 @@
-package com.example.presentation
+package com.example.dictcacheapp
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
