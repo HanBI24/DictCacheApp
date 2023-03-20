@@ -13,4 +13,9 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "DictCacheApp"
-include ':app'
+include ':feature_dictionary'
+include ':core'
+include ':common'
+include ':feature_dictionary:data'
+include ':feature_dictionary:domain'
+include ':feature_dictionary:presentation'
