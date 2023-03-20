@@ -12,23 +12,23 @@
  ├─ core
  │     └─ Resource.kt
  │
- ├─ feature_dictionary
- │     ├─ data
- │     │     ├─ local
- │     │     ├─ mapper
- │     │     ├─ remote
- │     │     ├─ repository
- │     │     └─ util
- │     │
- │     ├─ domain
- │     │     ├─ model
- │     │     ├─ repository
- │     │     └─ use_case
- │     │
- │     └─ presentation
- │           ├─ di
- │           ├─ state
- │           ├─ viewmodel
- │           ├─ view
- │           └─ DictApplication.kt
+ └─ feature_dictionary
+       ├─ data
+       │     ├─ local
+       │     ├─ mapper
+       │     ├─ remote
+       │     ├─ repository
+       │     └─ util
+       │
+       ├─ domain
+       │     ├─ model
+       │     ├─ repository
+       │     └─ use_case
+       │
+       └─ presentation
+             ├─ di
+             ├─ state
+             ├─ viewmodel
+             ├─ view
+             └─ DictApplication.kt
 ```
