@@ -31,4 +31,7 @@
              ├─ viewmodel
              ├─ view
              └─ DictApplication.kt
-```
+```  
+<br>  
+
+모듈화가 되어있지 않은 프로젝트를 보시려면 [non_module](https://github.com/HanBI24/DictCacheApp_Clean_Architecture/tree/non_module) 브런치로 이동하시면 됩니다.
