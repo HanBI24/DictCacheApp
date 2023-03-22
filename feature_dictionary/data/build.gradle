@@ -2,6 +2,7 @@ plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -33,6 +34,7 @@ android {
 
 dependencies {
     implementation project(':core')
+    implementation project(':common')
     implementation project(':feature_dictionary:domain')
 
     implementation 'androidx.core:core-ktx:1.7.0'
@@ -54,4 +56,11 @@ dependencies {
 
     // Kotlin Extensions and Coroutines support for Room
     implementation "androidx.room:room-ktx:2.5.0"
+
+    //Dagger - Hilt
+    // hilt 최신 버전 사용하면 conflict 발생
+    implementation "com.google.dagger:hilt-android:2.38.1"
+    kapt "com.google.dagger:hilt-android-compiler:2.37"
+    kapt "androidx.hilt:hilt-compiler:1.0.0"
+    implementation 'androidx.hilt:hilt-navigation-compose:1.0.0-alpha03'
 }
