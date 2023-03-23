@@ -45,12 +45,7 @@
 
 <br>
 
-## 참고 자료  
-[YouTube](https://youtu.be/Mr8YKDh3li4)  
-
-<br>
-
-## 참고 자료의 수정 내역
+## 수정 내역
 1. Mapper 클래스 작성
 2. common, core 모듈 생성 및 Resource.kt, UIEvent.kt, Constants.kt 이동 및 생성
-3. 해당 프로젝트 기반으로 모듈화 진행
+3. 패키지로 구성된 기본 프로젝트를 모듈로 변경
